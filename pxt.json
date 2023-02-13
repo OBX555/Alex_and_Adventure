@@ -1,5 +1,5 @@
 {
-    "name": "AEX AND ADVENTURE",
+    "name": "ALEX AND ADVENTURE",
     "version": "0.0.2",
     "description": "",
     "dependencies": {
@@ -12,7 +12,9 @@
         "assets.json",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "tutorial-info-cache.json"
+        "tutorial-info-cache.json",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
