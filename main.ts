@@ -4,8 +4,8 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     game.gameOver(false)
 })
-let DUCK: Sprite = null
 let CAR: Sprite = null
+let DUCK: Sprite = null
 tiles.setCurrentTilemap(tilemap`level 0`)
 let Alex = sprites.create(img`
     . . . . . . f f f f . . . . . . 
@@ -29,30 +29,6 @@ Alex.setPosition(77, 7)
 controller.moveSprite(Alex)
 scene.cameraFollowSprite(Alex)
 game.onUpdateInterval(250, function () {
-    CAR = sprites.create(img`
-        . . . . . . . . . . . . . . . . 
-        . . . . 3 3 3 3 3 3 3 3 . . . . 
-        . . . 3 d 3 3 3 3 3 3 c 3 . . . 
-        . . 3 c d 3 3 3 3 3 3 c c 3 . . 
-        . 3 c c d d d d d d 3 c c d 3 d 
-        . 3 c 3 a a a a a a a b c d 3 3 
-        . 3 3 a b b a b b b a a b d 3 3 
-        . 3 a b b b a b b b b a 3 3 3 3 
-        . a a 3 3 3 a 3 3 3 3 3 a 3 3 3 
-        . a a a a a a f a a a f a 3 d d 
-        . a a a a a a f a a f a a a 3 d 
-        . a a a a a a f f f a a a a a a 
-        . a f f f f a a a a f f f a a a 
-        . . f f f f f a a f f f f f a . 
-        . . . f f f . . . . f f f f . . 
-        . . . . . . . . . . . . . . . . 
-        `, SpriteKind.Enemy)
-    CAR.setVelocity(100, 0)
-    tiles.placeOnRandomTile(CAR, sprites.vehicle.roadHorizontal)
-    CAR.x = 16
-    CAR.setFlag(SpriteFlag.DestroyOnWall, true)
-})
-game.onUpdateInterval(500, function () {
     DUCK = sprites.create(img`
         . . . . . . . . . . b 5 b . . . 
         . . . . . . . . . b 5 b . . . . 
@@ -75,4 +51,28 @@ game.onUpdateInterval(500, function () {
     tiles.placeOnRandomTile(DUCK, sprites.castle.tileDarkGrass3)
     DUCK.x = 16
     DUCK.setFlag(SpriteFlag.DestroyOnWall, true)
+})
+game.onUpdateInterval(150, function () {
+    CAR = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . 3 3 3 3 3 3 3 3 . . . . 
+        . . . 3 d 3 3 3 3 3 3 c 3 . . . 
+        . . 3 c d 3 3 3 3 3 3 c c 3 . . 
+        . 3 c c d d d d d d 3 c c d 3 d 
+        . 3 c 3 a a a a a a a b c d 3 3 
+        . 3 3 a b b a b b b a a b d 3 3 
+        . 3 a b b b a b b b b a 3 3 3 3 
+        . a a 3 3 3 a 3 3 3 3 3 a 3 3 3 
+        . a a a a a a f a a a f a 3 d d 
+        . a a a a a a f a a f a a a 3 d 
+        . a a a a a a f f f a a a a a a 
+        . a f f f f a a a a f f f a a a 
+        . . f f f f f a a f f f f f a . 
+        . . . f f f . . . . f f f f . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
+    CAR.setVelocity(100, 0)
+    tiles.placeOnRandomTile(CAR, sprites.vehicle.roadHorizontal)
+    CAR.x = 16
+    CAR.setFlag(SpriteFlag.DestroyOnWall, true)
 })
