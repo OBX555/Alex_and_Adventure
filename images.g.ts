@@ -106,6 +106,52 @@ c b d c d 5 5 b 5 5 5 5 5 5 b .
 . . . . . c c f f c c . . . . . 
 . . . . c a c . c a c . . . . . 
 `;
+            case "image3":
+            case "dungeon monster":return img`
+........................
+........................
+...........ccc..........
+...........cccc.........
+.......ccc..ccccccc.....
+.......ccccccbbbbbbcc...
+........ccbbbbbbbbbbbc..
+.....cc..bbbbbbbbbbbbbc.
+.....cccbbbbbbbff1bbbbbc
+......cbbbbbbbbbffbbdbbc
+......bbbbbbbbbbbbbbbbbc
+...cc.bbbbddbbbbbb13bbc.
+...cccdbbdddddbbbb333bc.
+.....bddddddddddbbb33bc.
+..cccdddddbbbbbdddbbbbc.
+..cccdddddbbbbbbbbcccc..
+...ccddddddbbbbbcbcdc...
+ccccbddddddbcbbbcbcc....
+cdddddddddbbbbccbbc.....
+.cddddddbddbbbbbbcc.....
+..ccdddbbbddbbcbcdc.....
+....ccbbcbddddccdddcc...
+......cccddbbbdcccccc...
+........cccccccc........
+`;
+            case "image4":
+            case "Meteor":return img`
+. . . . . . . . 6 6 6 6 . . . . 
+. . . . 6 6 6 6 6 6 6 6 6 . . . 
+. . . 6 f 6 6 9 9 9 9 6 9 6 . . 
+. . 6 6 f f f f 9 9 9 6 9 9 6 . 
+. . 6 6 9 f f 6 9 9 f f f 9 9 6 
+. . 6 6 9 9 9 9 b 6 f f f 9 9 6 
+. 6 6 6 6 9 6 6 b 9 f 6 9 9 6 6 
+6 9 f f 6 6 6 9 b b 6 d d d 6 6 
+6 9 f f f f 6 6 6 6 d d d 9 9 6 
+6 9 9 6 f f 6 9 6 6 d d d 9 9 6 
+6 6 b 9 9 9 9 d 6 d d 9 d d 9 . 
+. 6 6 d d d d d d d 9 6 6 d 9 . 
+. . 6 6 6 d 6 6 6 d 9 9 b 6 . . 
+. . . . 6 d 9 6 6 d d d 6 . . . 
+. . . . 6 d d 9 9 6 d 6 . . . . 
+. . . . . . d 6 6 6 6 . . . . . 
+`;
         }
         return null;
     })
